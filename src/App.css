@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Gentium+Book+Plus&family=Montserrat:wght@300;400;500;600;700&family=Outfit:wght@300;400;600&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Red+Hat+Display:wght@500;700;900&family=Titillium+Web:wght@300;400;700&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header{
+  width: 100%;
+  height: 80px;
+  background-color: #2980B9;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0 2em;
+}
+.header .logo img{
+  width: 3em;
+  border-radius: 50%;
+}
+nav ul{
+  display: flex;
+}
+nav ul li{
+  list-style: none;
+  margin-right: 3em;
+}
+nav ul li a{
+  text-decoration: none;
+  color: #fff;
+}
+nav ul li a:hover{
+  color: #EC7063;
+  transition: all .2s ease-in;
+}
+.header .menu-btn{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  visibility: hidden;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 800px){
+  .header .menu-btn{
+    visibility: visible;
   }
-  to {
-    transform: rotate(360deg);
+  nav ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background-color: #2980B9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translateY(-100%);
+    transition: all .3s ease;
+  }
+  .header .responsive{
+    transform: none;
+  }
+  nav ul li{
+    margin: .7em 0;
+  }
+  nav ul li a{
+    font-size: 1.2rem;
+  }
+  .header .close{
+    position: absolute;
+    top: 2em;
+    right: 2em;
   }
 }
